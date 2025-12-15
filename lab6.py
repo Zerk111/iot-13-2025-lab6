@@ -34,9 +34,6 @@ def logged(exc_type, mode="console"):
 
 
 def convert_numbers_to_strings(obj):
-    """
-    Рекурсивно перетворює всі int/float у рядки у словниках і списках
-    """
     if isinstance(obj, dict):
         return {k: convert_numbers_to_strings(v) for k, v in obj.items()}
     elif isinstance(obj, list):
